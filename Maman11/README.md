@@ -1,3 +1,28 @@
+# Run instructions
+
+RIGHT NOW U CAN RUN THE PROGRAM AND IT WILL BE EXECUTED WITH -
+
+user_input.py
+
+```commandline
+def generate_example_matrix() -> Matrix:
+    lst = [[3, 1, 2], [6, 4, -1], [7, 8, 5]]
+    input_matrix: Matrix = Matrix(lst)
+    return input_matrix
+
+```
+
+U CAN CHOSE THE USER ARGS OPTION BY UNCOMMENT THE FIRST LINE AND COMMENT THE SECOND LINE -
+
+tiles.py
+
+```commandline
+# input_matrix = generate_user_args_matrix()
+input_matrix = generate_example_matrix()
+```
+
+WITH generate_user_args_matrix() THE PROGRAM NEED TO RUN AS tiles.py 0 1 2 3 ....
+
 # General Overview
 
 ## Algorithms and Functions:

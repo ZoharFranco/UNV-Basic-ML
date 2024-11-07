@@ -7,7 +7,7 @@ from consts import TARGET_MATRIX, EMPTY_CELL
 from models.direction import Direction
 from models.matrix import Matrix
 from models.orbit import Orbit
-from utils.user_input import generate_example_matrix
+from utils.user_input import generate_example_matrix, generate_user_args_matrix
 
 
 def bfs(matrix: Matrix, target_matrix: Matrix) -> Tuple[Orbit, int]:
@@ -162,8 +162,6 @@ def main():
     input_matrix = generate_example_matrix()
     print(f'Input matrix: \n{input_matrix}')
 
-    print(input_matrix == TARGET_MATRIX)
-
     # Algorithms run
     algorithms: List[Callable[[Matrix, Matrix], Tuple[Orbit, int]]] = [
         bfs,
@@ -172,7 +170,7 @@ def main():
         a_star
     ]
     for algorithm in algorithms:
-        print(f'Algorithm {algorithm.__name__}')
+        print(f'\nAlgorithm {algorithm.__name__} -')
 
         steps: int
         orbit: Orbit
